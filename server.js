@@ -7,7 +7,9 @@ const http = require("http");   // module có sẵn để tạo máy chủ web
 const fs = require("fs");       // đọc/ghi file
 const path = require("path");   // xử lý đường dẫn file
 
-const PORT = 3000;
+// Khi triển khai, nền tảng hosting sẽ cấp cổng qua biến môi trường PORT.
+// Chạy trên máy bạn thì dùng 3000.
+const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, "data.json"); // "cơ sở dữ liệu" đơn giản
 const PUBLIC_DIR = path.join(__dirname, "public");   // thư mục chứa front end
 
